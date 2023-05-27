@@ -1,47 +1,46 @@
-Gets the list of all places of a city
+GET method, retrieve a place
 ---
 tags:
   - Places
 parameters:
-  - name: city_id
+  - name: place_id
     in: path
     type: string
     required: true
-    description: the unique id of the city
-
+    description: the unique id of the place to be listed
 responses:
   200:
-    description: Successful request
+    description: Succsesful resquest
     schema:
       type: array
       items:
         properties:
           __class__:
-            type: string
-          created_at:
-            type: string
-            description: time of creation of the instance
+            type: "string"
           updated_at:
-             type: string
-             description: time of last update of the instance
+            type: string
+            description: datetime of instance update
+          updated_at:
+            type: string
+            description: time of last update of the instance
           id:
             type: string
-            description: The uuid of the state instance
+            description: The unique id of the state instance
           description:
-             type: string
-             description: Description of the place
+            type: string
+            description: Place description
           latitude:
              type: number
-             description: Latitude of the place
+             description: Place latitude
           longitude:
              type: number
-             description: Longitude of the place
+             description: Place longitude
           max_guest:
              type: integer
-             description: Number of guests possible
+             description: Max guests
           name:
-             type: string
-             description: name of the place
+            type: string
+            description: Place name
           number_bathrooms:
              type: integer
              description: Number of bathrooms
@@ -50,10 +49,10 @@ responses:
              description: Number of rooms
           price_by_night:
              type: number
-             description: Price of the night
+             description: Price by night
           user_id:
              type: string
-             description: uuid of the owner
+             description: Owner id
 
   404:
     description: City not found

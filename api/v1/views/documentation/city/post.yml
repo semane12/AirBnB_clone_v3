@@ -1,4 +1,4 @@
-Post a new city
+    Post a new city.
     ---
     tags:
       - Cities
@@ -7,7 +7,7 @@ Post a new city
         in: path
         type: string
         required: true
-        description: the unique id of the city state
+        description: city state id 
       - name: body_request
         in: body
         required: true
@@ -19,8 +19,8 @@ Post a new city
 
     responses:
       404:
-        description: State not found!
+        description: State not found!!!!
       400:
-        description: Not a valid JSON or missing name
+        description: Missing name or Not Valid JSON 😳
       201:
-        description: Request completed successfully
+        description: Successful request ✔️

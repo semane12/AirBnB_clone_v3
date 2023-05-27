@@ -1,13 +1,12 @@
- Posts a new place.
+    Posts a new state.
     ---
     tags:
       - Places
     parameters:
       - name: city_id
         in: path
-        type: string
         required: true
-        description: The id of the City to link to
+        description: city id to be linked
       - name: user_id and name
         in: body
         required: true
@@ -21,9 +20,7 @@
             type: string
 
     responses:
-      404:
-        description: resource not found!
       400:
-        description: missing user_id, name or invalid JSON
+        description: Missing name or Not Valid JSON 😳
       201:
-        description: Successful request
+        description: Successful request ✔️
