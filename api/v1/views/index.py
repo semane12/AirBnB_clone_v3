@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains endpoint(route) status
+This module contains endpoint(route) stats
 """
 from models import storage
 from flask import Flask
@@ -8,12 +8,12 @@ from api.v1.views import app_views
 from flask import jsonify
 
 
-@app_views.route('/status', strict_slashes=False)
+@app_views.route('/stats', strict_slashes=False)
 def status():
     """
-    Returns a JSON status
+    Returns a JSON stats
     """
-    return jsonify({"status": "OK"})
+    return jsonify({"stats": "OK"})
 
 
 @app_views.route('/stats', strict_slashes=False)
