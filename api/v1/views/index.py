@@ -14,6 +14,7 @@ def stats():
     """
     return jsonify({"stats": "OK"})
 
+
 @app_views.route('/stats', strict_slashes=False)
 def count():
     """
