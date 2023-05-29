@@ -7,12 +7,14 @@ from flask import Flask
 from api.v1.views import app_views
 from flask import jsonify
 
-
 @app_views.route('/stats', strict_slashes=False)
 def status():
-    """
-    Returns a JSON stats
-    """
+
+@app_views.route('/stats', strict_slashes=False)
+def stats():
+"""
+Returns a JSON stats
+"""
     return jsonify({"stats": "OK"})
 
 
