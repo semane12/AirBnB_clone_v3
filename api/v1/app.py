@@ -15,7 +15,6 @@ app.register_blueprint(app_views)
 cors = CORS(app, resources={r"/api/*": {"origins": "0.0.0.0"}})
 
 
-
 @app.teardown_appcontext
 def close_db(obj):
     """ calls methods close() """
@@ -26,6 +25,7 @@ def close_db(obj):
 def page_not_foun(error):
     """ Loads a custom 404 page not found """
     return make_response(jsonify({"error": "Not found"}), 404)
+
 
 app.config['SWAGGER'] = {
     'title': 'AirBnB clone - RESTful API',
